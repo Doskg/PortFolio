@@ -1,7 +1,11 @@
 
 function addNote() {
-    const title = document.getElementById('title').value;
+    const accountNumber = document.getElementById('accountNumber').value;
     const content = document.getElementById('content').value;
+    const accountName = document.getElementById('accountName').value;
+    const title = document.getElementById('title').value;
+    const issues = document.getElementById('issues').value;
+
 
     if (title === '' || content === '') {
         alert('Por favor, completa todos los campos.');
@@ -60,7 +64,7 @@ function copyFormData() {
     }
 
     const tempInput = document.createElement('textarea');
-    tempInput.value = `Account#: ${accountNumber}\nAccount Name: ${accountName}\nName: ${title}\nIssues: ${issues}\nSummary: ${content} `;
+    tempInput.value = `Account#: ${accountNumber}\nAccount Name: ${accountName}\nCustomer Name: ${title}\nDescription: ${issues}\nSummary: ${content} `;
     document.body.appendChild(tempInput);
     tempInput.select();
     document.execCommand('copy');
